@@ -1,0 +1,51 @@
+<!doctype html>
+<html ng-app="app">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+    <script src="app.js"></script>
+
+    <!-- dependencies from https://github.com/ashish-chopra/angular-gauge -->
+    <script src="dist/angularjs-gauge.min.js"></script>
+    <script src="dist/angularjs-gauge.js"></script>
+
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <div ng-controller="infoController" ng-include src="'navbar.html'"></div>
+    <div class="container">
+
+        <section class="row container section">
+            <div class="col person-img-container">
+                <img class="person-img" src="person.png" />
+            </div>
+            <div class="col profile-container">
+                <ng-include src="'profile.html'"></ng-include>
+            </div>
+        </section>
+
+        <section class="row container section justify-content-center">
+            <ng-include src="'welcome.html'"></ng-include>
+        </section>
+
+        <section class="row container justify-content-md-center section" ng-controller="infoController">
+            <div class="col-md-auto" ng-repeat="category in info.categories">
+                <ng-gauge size="150" type="full" thick="5" min="0" max=category.max value=category.value cap="round"
+                    label={{category.name}} foreground-color={{category.color}} background-color=" #C3C3C3" append={{category.unit}}>
+                </ng-gauge>
+            </div>
+        </section>
+
+        <section class="container section">
+            <ng-include src="'conclusion.html'"></ng-include>
+        </section>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col-10">
+        <table class="table no-border" ng-controller="profileController">
+            <tbody>
+                <tr ng-repeat="target in targets">
+                    <th scope="row">{{target.name}}</th>
+                    <td>{{target.description}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="profile-button">
+        <button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModal">Edit Profile</button>
+    </div>
+    <ng-include src="'modal.html'"></ng-include>
+</div>

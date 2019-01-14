@@ -1,0 +1,84 @@
+
+.section{
+    margin-top: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.person-img-container{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.person-img {
+    width:200px;
+}
+
+.profile-container{
+    flex-grow: 3 !important;
+    border-style: solid;
+    display: flex;
+    align-items: center;
+}
+
+.no-border th, .no-border td{
+    border: none !important;
+}
+
+.profile-button{
+    align-self: flex-end;
+    margin-bottom: 1rem;
+}
+
+.welcome{
+    font-size: 20px;
+}
+
+.ng-binding{
+    z-index: -1;
+}
+.check-dashboard{
+    color: #737373;
+}
+
+.conclusion-container{
+    width: 100%;
+}
+
+.conversion-conclusion{
+    margin-bottom: 1rem;
+    background: #FFFFA6;
+    padding: 7px 10px;
+    border-radius: 5px;
+    width: 100%;
+    color: #7f7f00;
+}
+
+.product-conclusion{
+    margin-bottom: 1rem;
+    background: #FF9999;
+    padding: 7px 10px;
+    border-radius: 5px;
+    width: 100%;
+    color: #660000;
+}
+
+a {
+    text-decoration: none;
+}
+
+#result {
+    font-weight: bold;
+}
+
+.conversion-conclusion #improve {
+    font-weight: bold;
+    color: #7f7f00;
+}  
+
+.product-conclusion #improve {
+    font-weight: bold;
+    color: #660000;
+}  
